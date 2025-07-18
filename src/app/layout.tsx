@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import { ThemeProvider } from "@/provider/ThemeProvider";
 import { Toaster } from "sonner";
 
-import Header from "@/components/ui/Header";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "NeuNote",
@@ -26,7 +26,8 @@ function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
             </main>
           </div>
 
-          <Toaster />
+          {/**Toaster for notification */}
+          <Toaster position="bottom-right" richColors expand={true} />
         </ThemeProvider>
       </body>
     </html>
