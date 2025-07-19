@@ -22,13 +22,18 @@ export const loginAction = async (email: string, password: string) => {
 };
 
 
-export const signUpAction = async (email: string, password: string) => {
+export const signUpAction = async (email: string, password: string, name: string) => {
     try {
         const { auth } = await createClient();
 
         const { data, error } = await auth.signUp({
             email,
-            password
+            password,
+            options: {
+                data: {
+                    full_name: name,
+                },
+            },
         });
 
         if(error) throw error;
