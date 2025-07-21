@@ -1,11 +1,11 @@
 import { TransitionStartFunction } from "react";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
-import { loginAction, signUpAction } from "@/actions/users";
+import { loginAction, signUpAction, signInWithGoogle } from "@/actions/users";
 import { toast } from "sonner";
 import { checkValidUserData } from "./validateData";
 
-const handleSubmit = (
+export const handleSubmit = (
     formData: FormData,
     isLoginForm: boolean,
     router: AppRouterInstance,
@@ -58,4 +58,21 @@ const handleSubmit = (
     });
 };
 
-export default handleSubmit;
+
+export const oAuthSubmit = async () => {
+    const { errorMessage, redirectUrl } = await signInWithGoogle();
+
+    if (errorMessage) {
+        toast.error("Error", {
+            description: "Failed to initiate Google Sign-in",
+        });
+
+    } else if(redirectUrl) {
+
+        toast.success("Redirecting to Google", {
+            description: errorMessage,
+        });
+        window.location.href = redirectUrl;
+    }
+
+};
