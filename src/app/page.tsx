@@ -1,9 +1,11 @@
 import React from "react";
 
-const HomePage = () => {
+const LandingPage = () => {
   return (
-    <div className="h-20 bg-red-400 text-black">HomePage</div>
+    <div className="h-20 flex-col bg-red-400 text-black">
+      Landing Page
+    </div>
   );
 };
 
-export default HomePage;
+export default LandingPage;

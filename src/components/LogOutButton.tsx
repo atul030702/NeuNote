@@ -6,9 +6,13 @@ import { useState } from "react";
 import { logOutAction } from "@/actions/users";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { Button } from "./ui/button";
 
-const LogOutButton = () => {
+type Props = {
+    width: number | string;
+    yMargin: number
+};
+
+const LogOutButton = ({width, yMargin}: Props) => {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
 
@@ -33,14 +37,13 @@ const LogOutButton = () => {
     };
 
     return (
-        <Button 
-            variant="outline" 
-            className="w-24 cursor-pointer"
+        <button 
+            className={`w-${width} bg-[#7A8A6F] px-4 py-${yMargin} text-white rounded-sm cursor-pointer`}
             onClick={handleLogOut}
             disabled={loading}
         >
             {loading ? <Loader2 className="animate-spin"/> : "Log Out"}
-        </Button>
+        </button>
     );
 };
 
