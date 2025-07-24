@@ -1,9 +1,13 @@
 import React from "react";
 
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+
 const LandingPage = () => {
   return (
-    <div className="h-20 flex-col bg-red-400 text-black">
-      Landing Page
+    <div className="flex flex-col">
+      <Hero />
+      <Features />
     </div>
   );
 };

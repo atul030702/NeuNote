@@ -1,4 +1,4 @@
-import { getUser } from "@/auth/server";
+//import { getUser } from "@/auth/server";
 
 import { SidebarProvider, SidebarTrigger } from "./ui/sidebar";
 import AppSidebar from "./App-sidebar";
@@ -8,8 +8,8 @@ type Props = {
 };
 
 const HomePage = async ({ searchParams }: Props) => {
-    const noteIdParam = (await searchParams).noteId;
-    const user = await getUser();
+    //const noteIdParam = (await searchParams).noteId;
+    //const user = await getUser();
 
     return (
         <SidebarProvider>

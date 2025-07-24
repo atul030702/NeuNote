@@ -29,19 +29,19 @@ const MobileMenu = ({ user }: Props) => {
                             <>
                                 <a
                                     href="#features"
-                                    className="block hover:text-[#7A8A6F]"
+                                    className="block hover:text-color"
                                 >
                                     Features
                                 </a>
                                 <a
                                     href="#pricing"
-                                    className="block hover:text-[#7A8A6F]"
+                                    className="block hover:text-color"
                                 >
                                     Pricing
                                 </a>
                                 <a
                                     href="#"
-                                    className="block hover:text-[#7A8A6F]"
+                                    className="block hover:text-color"
                                 >
                                     Blog
                                 </a>
@@ -50,7 +50,7 @@ const MobileMenu = ({ user }: Props) => {
                         { user ? (
                             <LogOutButton width={"full"} yMargin={2} />
                         ) : (
-                            <button className="w-full bg-[#7A8A6F] px-5 py-2 rounded-sm text-white">
+                            <button className="w-full custom-bg px-5 py-2 rounded-sm text-white">
                                 <Link href="/login">Login</Link>
                             </button>
                         )}

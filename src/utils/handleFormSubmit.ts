@@ -49,11 +49,13 @@ export const handleSubmit = (
                 description: description,
             });
 
-            router.replace("/");
+            router.replace("/home");
         }else {
             toast.error("Error", {
                 description: errorMessage,
             });
+
+            router.replace("/");
         }
     });
 };
