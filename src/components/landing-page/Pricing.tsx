@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Check } from "lucide-react";
 import plans from "@/utils/pricing";
 
@@ -5,7 +7,7 @@ const Pricing = () => {
 
     return (
         <section id="pricing"
-            className="bg-accent py-16"
+            className="bg-accent py-16 md:py-20"
         >
             <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
                 <div className="text-center mb-15">
@@ -53,9 +55,9 @@ const Pricing = () => {
                                     ))}
                                 </ul>
                                 <button
-                                    className="element w-full custom-bg py-3 rounded-md font-medium transition-all"
+                                    className="element w-full custom-bg py-3 rounded-md font-medium cursor-pointer"
                                 >
-                                    {plan.cta}
+                                    <Link href="/login"> {plan.cta} </Link>
                                 </button>
                             </div>
                         </div>

@@ -1,8 +1,10 @@
 import React from "react";
 
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Pricing from "@/components/Pricing";
+import Hero from "@/components/landing-page/Hero";
+import Features from "@/components/landing-page/Features";
+import Pricing from "@/components/landing-page/Pricing";
+import CTA from "@/components/landing-page/CTA";
+import Footer from "@/components/landing-page/Footer";
 
 const LandingPage = () => {
   return (
@@ -10,6 +12,8 @@ const LandingPage = () => {
       <Hero />
       <Features />
       <Pricing />
+      <CTA />
+      <Footer />
     </div>
   );
 };
