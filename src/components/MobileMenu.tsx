@@ -29,28 +29,28 @@ const MobileMenu = ({ user }: Props) => {
                             <>
                                 <a
                                     href="#features"
-                                    className="block hover:text-color"
+                                    className="block hover:text-sage transition-colors duration-200"
                                 >
                                     Features
                                 </a>
                                 <a
                                     href="#pricing"
-                                    className="block hover:text-color"
+                                    className="block hover:text-sage transition-colors duration-200"
                                 >
                                     Pricing
                                 </a>
-                                <a
-                                    href="#"
-                                    className="block hover:text-color"
+                                <Link
+                                    href="/about"
+                                    className="block hover:text-sage transition-colors duration-200"
                                 >
-                                    Blog
-                                </a>
+                                    About
+                                </Link>
                             </>
                         )}
                         { user ? (
                             <LogOutButton width={"full"} yMargin={2} />
                         ) : (
-                            <button className="w-full custom-bg px-5 py-2 rounded-sm text-white">
+                            <button className="w-full bg-sage px-5 py-2 rounded-sm text-white">
                                 <Link href="/login">Login</Link>
                             </button>
                         )}

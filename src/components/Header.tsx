@@ -15,7 +15,7 @@ const Header = async () => {
         >
             <Link href="/">
                 <h1 className="flex text-2xl sm:text-3xl md:text-4xl font-bold ml-2 sm:ml-4 md:ml-4">
-                    neu <span className="text-color">note</span>
+                    neu <span className="text-sage">note</span>
                 </h1>
             </Link>
 
@@ -25,22 +25,22 @@ const Header = async () => {
                     <div className="flex items-center gap-5">
                         <a
                             href="#features"
-                            className="block hover:text-color transition-all"
+                            className="block hover:text-sage transition-colors duration-200"
                         >
                             Features
                         </a>
                         <a
                             href="#pricing"
-                            className="block hover:text-color transition-all"
+                            className="block hover:text-sage transition-colors duration-200"
                         >
                             Pricing
                         </a>
-                        <a
-                            href="#"
-                            className="block hover:text-color transition-all"
+                        <Link
+                            href="/about"
+                            className="block hover:text-sage transition-colors duration-200"
                         >
-                            Blog
-                        </a>
+                            About
+                        </Link>
                     </div>
                 )}
 
@@ -49,7 +49,7 @@ const Header = async () => {
                 { user ? (
                     <LogOutButton width={24} yMargin={1} />
                 ) : (
-                    <button className="custom-bg px-4 rounded-sm text-white font-normal">
+                    <button className="bg-sage px-4 rounded-sm text-white font-medium transition-colors duration-300 hover:bg-sage/75">
                         <Link href="/login">Login</Link>
                     </button>
                 )}

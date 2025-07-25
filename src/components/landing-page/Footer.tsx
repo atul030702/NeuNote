@@ -18,7 +18,11 @@ const Footer = () => {
                     <ul className="element space-x-10 text-sm flex">
                         <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li>
+                            <Link href="/about">
+                                About
+                            </Link>
+                        </li>
                         <li>
                             <Link href="/sign-up"
                                 className="whitespace-nowrap"
@@ -30,20 +34,35 @@ const Footer = () => {
 
                     <ul className="element flex space-x-10">
                         <li>
-                            <SiX />
+                            <a href="https://x.com/k_atul0307"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <SiX className="hover:text-sage hover:scale-115 transition-all duration-300"/>
+                            </a>
                         </li>
                         <li>
-                            <SiLinkedin />
+                            <a href="https://www.linkedin.com/in/atul030702/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <SiLinkedin className="hover:text-sage hover:scale-115 transition-all duration-300"/>
+                            </a>
                         </li>
                         <li>
-                            <SiGithub />
+                            <a href="https://github.com/atul030702"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <SiGithub className="hover:text-sage hover:scale-115 transition-all duration-300"/>
+                            </a>
                         </li>
                     </ul>                
                 </div>
 
                 <div className="mt-10 pt-10 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
-                        &copy; {new Date().getFullYear()} nue<span className="text-color">note</span>. All rights reserved.
+                        &copy; {new Date().getFullYear()} nue<span className="text-sage">note</span>. All rights reserved.
                     </p>
                     <div className="flex space-x-6">
                         <a
