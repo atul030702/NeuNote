@@ -12,7 +12,7 @@ const CTA = () => {
                 </p>
 
                 <Link href="/sign-up"
-                    className="element custom-bg text-white px-8 py-3 rounded-md text-lg font-medium cursor-pointer"
+                    className="element bg-sage text-white px-8 py-3 rounded-md text-lg font-medium cursor-pointer transition-colors duration-300 hover:bg-sage/75"
                 >
                     Sign Up Free
                 </Link>

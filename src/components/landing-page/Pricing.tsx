@@ -26,36 +26,36 @@ const Pricing = () => {
                             `}
                         >
                             {plan.popular && (
-                                <div className="element custom-bg text-sm font-medium py-1 px-3 absolute top-0 right-0">
+                                <div className="bg-sage text-white text-sm font-medium py-1 px-3 absolute top-0 right-0">
                                     Popular
                                 </div>
                             )}
 
                             <div className="p-8">
-                                <h3 className="element text-xl font-bold mb-2">
+                                <h3 className="text-xl font-bold mb-2">
                                     {plan.name}
                                 </h3>
                                 <div className="mb-4">
-                                    <span className="element text-3xl font-bold">
-                                    {plan.price}
+                                    <span className="text-3xl font-bold">
+                                        {plan.price}
                                     </span>
-                                    <span className="element text-gray-600 dark:text-gray-400 ml-1">
-                                    /{plan.period}
+                                    <span className="text-gray-600 dark:text-gray-400 ml-1">
+                                        /{plan.period}
                                     </span>
                                 </div>
-                                <p className="element text-gray-600 dark:text-gray-400 mb-6">
+                                <p className="text-gray-600 dark:text-gray-400 mb-6">
                                     {plan.description}
                                 </p>
                                 <ul className="space-y-3 mb-8">
                                     {plan.features.map((feature, i) => (
-                                        <li key={i} className="element flex items-center">
-                                            <Check size={18} className="text-color mr-2" />
+                                        <li key={i} className="flex items-center">
+                                            <Check size={18} className="text-sage mr-2" />
                                             <span> {feature} </span>
                                         </li>
                                     ))}
                                 </ul>
                                 <button
-                                    className="element w-full custom-bg py-3 rounded-md font-medium cursor-pointer"
+                                    className="w-full bg-sage text-white py-3 rounded-md font-medium cursor-pointer transition-colors duration-300 hover:bg-sage/75"
                                 >
                                     <Link href="/login"> {plan.cta} </Link>
                                 </button>

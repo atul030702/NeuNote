@@ -9,19 +9,19 @@ const Features = () => {
         {
             title: 'Smart Organization',
             description:'AI-powered tagging and linking helps you discover connections between your thoughts.',
-            icon: <Brain size={36} className="text-color" />,
+            icon: <Brain size={36} className="text-sage" />,
             image: "/feature-image-1.webp",
         },
         {
             title: 'Seamless Sync',
             description:'Access your notes anytime, anywhere — flawlessly synced across all devices.',
-            icon: <Cloud size={36} className="text-color" />,
+            icon: <Cloud size={36} className="text-sage" />,
             image: "/feature-image-2.webp",
         },
         {
             title: 'Focus Mode',
             description:'A beautiful, distraction-free interface designed to help you concentrate.',
-            icon: <Focus size={36} className="text-color" />,
+            icon: <Focus size={36} className="text-sage" />,
             image: "/feature-image-3.webp",
         },
     ];
@@ -53,13 +53,13 @@ const Features = () => {
                             <p className="element text-lg text-gray-600 dark:text-gray-300 mb-6">
                                 {feature.description}
                             </p>
-                            <button className="element flex items-center gap-2 text-color font-medium cursor-pointer transition-all duration-300 hover:underline">
+                            <button className="element flex items-center gap-2 text-sage font-medium cursor-pointer transition-all duration-300 hover:underline">
                                 Learn more <FiArrowRight />
                             </button>
                         </div>
                         <div className="w-full lg:w-1/2">
                             <div className="relative">
-                                <div className={`element custom-bg absolute inset-0 rounded-lg opacity-75 transform ${index % 2 === 0 ? "rotate-4" : "-rotate-4"}`}></div>
+                                <div className={`element bg-sage absolute inset-0 rounded-lg opacity-75 transform ${index % 2 === 0 ? "rotate-4" : "-rotate-4"}`}></div>
                                 <Image 
                                     className="element w-full relative rounded-lg shadow-lg z-5"
                                     src={feature.image}
