@@ -159,15 +159,11 @@
   background: hsl(222.2 47.4% 11.2%);
 }
 
-.custom-border {
-  border-color: rgba(122, 138, 111, 1);
-}
-
 
 @keyframes appear {
   from {
     opacity: 0;
-    scale: 0.5;
+    scale: 0.7;
   }
   to {
     opacity: 1;

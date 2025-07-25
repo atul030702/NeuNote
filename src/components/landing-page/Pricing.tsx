@@ -22,7 +22,7 @@ const Pricing = () => {
                     {plans.map((plan, index) => (
                         <div key={index}
                             className={`relative overflow-hidden border transition-all duration-300
-                                ${plan.popular ? "border-custom-border shadow-lg" : "border-gray-200 dark:border-gray-700 hover:shadow-md dark:hover:shadow-lg"}
+                                ${plan.popular ? "border-sage shadow-lg" : "border-gray-200 dark:border-gray-700 hover:shadow-md dark:hover:shadow-lg"}
                             `}
                         >
                             {plan.popular && (
@@ -55,7 +55,8 @@ const Pricing = () => {
                                     ))}
                                 </ul>
                                 <button
-                                    className="w-full bg-sage text-white py-3 rounded-md font-medium cursor-pointer transition-colors duration-300 hover:bg-sage/75"
+                                    className={`w-full py-3 rounded-md font-medium cursor-pointer transition-colors duration-300
+                                    ${plan.popular ? "bg-sage text-white hover:bg-sage/75" : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600"}`}
                                 >
                                     <Link href="/login"> {plan.cta} </Link>
                                 </button>
