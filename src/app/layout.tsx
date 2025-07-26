@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/provider/ThemeProvider";
 import { Toaster } from "sonner";
 import Header from "@/components/Header";
+import NoteProvider from "@/provider/NoteProvider";
 
 export const metadata: Metadata = {
   title: "NeuNote",
@@ -24,16 +25,20 @@ function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >   
-          <div className="min-h-screen w-full flex flex-col">
-            <Header />
-            <main className="flex flex-1 flex-col pt-10">
-              {children}
-            </main>
-          </div>
+        > 
+          <NoteProvider> 
 
-          {/**Toaster for notification */}
-          <Toaster position="bottom-right" richColors expand={true} />
+            <div className="min-h-screen w-full flex flex-col">
+              <Header />
+              <main className="flex flex-1 flex-col pt-10">
+                {children}
+              </main>
+            </div>
+
+            {/**Toaster for notification */}
+            <Toaster position="bottom-right" richColors expand={true} />
+            
+          </NoteProvider>
 
         </ThemeProvider>
       </body>
