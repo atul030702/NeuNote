@@ -42,3 +42,9 @@ export async function getUser() {
 
     return userObject?.data?.user;
 }
+
+/*export async function getOAuthUser() {
+    const { auth } = await createClient();
+
+    const userObject = await 
+}*/

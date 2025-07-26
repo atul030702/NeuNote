@@ -31,15 +31,17 @@ const AppSidebar = async () => {
 
     return (
         <Sidebar>
-            {/*<SidebarHeader />*/}
-            <SidebarContent className="custom-scrollbar mt-25">
+            <SidebarHeader className="text-center">
+                <h1 className="text-3xl sm:text-4xl font-bold py-3">neu<span className="text-sage">note</span></h1>
+            </SidebarHeader>
+            <SidebarContent className="custom-scrollbar">
                 <SidebarGroup>
-                    <SidebarGroupLabel className="my-2 text-lg">
+                    <SidebarGroupLabel className="my-2 mx-auto text-lg">
                         {user ? (
                             "Your Notes"
                         ) : (
                             <p>
-                                <Link href={"/login"}>
+                                <Link href={"/login"} className="underline">
                                     Login
                                 </Link>{" "}
                                 to see your notes

@@ -10,8 +10,8 @@ const Header = async () => {
     const user = await getUser();
 
     return (
-        <header className="sticky top-0 flex w-full items-center justify-between bg-popover px-4 z-10
-            sm:px-8 py-3.5 sm:py-5 md:py-5"
+        <header className="sticky top-0 flex w-full items-center justify-between bg-popover px-4 z-20
+            sm:px-8 py-3.5 sm:py-5 md:py-5 border-b border-sidebar-border"
         >
             <Link href="/">
                 <h1 className="flex text-2xl sm:text-3xl md:text-4xl font-bold ml-2 sm:ml-4 md:ml-4">
