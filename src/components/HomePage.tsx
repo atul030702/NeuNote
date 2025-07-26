@@ -33,7 +33,10 @@ const HomePage = async ({ searchParams }: Props) => {
                             <NewNoteButton user={user} />
                         </div>
 
-                        <NoteTextInput noteId={noteId} startingNoteText={note?.text || ""} />
+                        <NoteTextInput noteId={noteId} 
+                            startingNoteText={note?.text || ""} 
+                            noteTitleText={note?.title || ""}
+                        />
                     </div>
                 </main>
             </div>
